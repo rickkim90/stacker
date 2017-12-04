@@ -23,6 +23,8 @@ class MainController < ApplicationController
   end
 
   def mypage
+    @stacks = Stack.all
+    @stack_fields = StackField.all
   end
 
   def mypage_add_stack
