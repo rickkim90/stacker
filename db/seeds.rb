@@ -70,3 +70,14 @@ CSV.foreach(Rails.root.join('language_stack.csv')) do |row|
     stack_field_id: 1
   )
 end
+
+CSV.foreach(Rails.root.join('app_stack.csv')) do |row|
+  Stack.create(
+    name: row[0],
+    site_url: row[1],
+    short_describe: row[2],
+    describe: row[3],
+    version: row[4],
+    stack_field_id: 1
+  )
+end

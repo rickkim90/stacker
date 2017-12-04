@@ -1,27 +1,7 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Listing Stacks</h1>
 
-
-<<<<<<< HEAD
-  <tbody>
-    <% @stacks.each do |stack| %>
-      <tr>
-        <td><img src="https://s3.ap-northeast-2.amazonaws.com/dahisy-4th-project/<%= stack.stack_field.field %>/<%= stack.name %>.png" width="90" height="90"></td>
-        <td><%= stack.name %></td>
-        <td><a href="<%= stack.site_url %>">공식 웹사이트</a></td>
-        <td><%= stack.short_describe %></td>
-        <td><%= stack.describe %></td>
-        <td><%= stack.version %></td>
-        <td><%= stack.stack_field.field %></td>
-        <td><%= stack.user %></td>
-        <td><%= link_to 'Show', stack %></td>
-        <td><%= link_to 'Edit', edit_stack_path(stack) %></td>
-        <td><%= link_to 'Destroy', stack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-=======
->>>>>>> feature/dahye
 
 <br>
 
@@ -36,12 +16,8 @@
   <div class="collapse" id="<%= field.field%>">
     <div class="card card-body">
       <% field.stacks.each do |stack| %>
-        <a href="" data-toggle="tooltip" title="<%=stack.name%>">
-<<<<<<< HEAD
-          <%= image_tag "https://s3.ap-northeast-2.amazonaws.com/dahisy-4th-project/#{field.field}/#{stack.name}.png",class: "mr-3", width: "50", height: "50" %>
-=======
+        <a href="/stacks/<%=stack.id%>" data-toggle="tooltip" title="<%=stack.name%>">
           <%= image_tag "https://s3.ap-northeast-2.amazonaws.com/dahisy-4th-project/#{field.field}/#{stack.name}.png", id: "#{stack.name}", class: "mr-3", width: "50", height: "50" %>
->>>>>>> feature/dahye
         </a>
       <% end %>
     </div>
@@ -49,9 +25,7 @@
 <% end %>
 
 <script>
-
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
-
 </script>

@@ -2,16 +2,12 @@ class MainController < ApplicationController
   # load_and_authorize_resource
 
   def index
-    # require 'git-trend'
-    # @lists = []
-    # repos = GitTrend.get(:all, :daily)
-    #
-    # repos.first(10).each do |r|
-    #   @lists <<  "#{r.name}=#{r.lang}=#{r.star_count}"
-    # end
     require 'nokogiri'
     require 'json'
     require 'awesome_print'
+
+    @stacks = Stack.all
+    @stack_fields = StackField.all
 
 
     arr = Array.new
@@ -25,6 +21,13 @@ class MainController < ApplicationController
       @star << a["count"]
     end
   end
+
+  def mypage
+  end
+
+  def mypage_add_stack
+  end
+
 
 
 end

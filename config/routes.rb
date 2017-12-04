@@ -7,11 +7,16 @@ Rails.application.routes.draw do
   resources :company_fields
   resources :stacks
   resources :stack_fields
+
+  get 'main/mypage'
+  get 'main/mypage_add_stack'
+
   #devise controller 생성했더니 이거 추가하라 했음 ㅠㅠㅠ....
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

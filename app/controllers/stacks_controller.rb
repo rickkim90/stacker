@@ -63,6 +63,7 @@ class StacksController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stack
@@ -71,6 +72,6 @@ class StacksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stack_params
-      params.require(:stack).permit(:name, :site_url, :short_describe, :describe, :version, :stack_field_id, :user_id)
+      params.require(:stack).permit(:name, :site_url, :short_describe, :stacks, :describe, :version, :stack_field_id, :user_id)
     end
 end

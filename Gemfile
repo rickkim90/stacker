@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+
 gem 'cancancan', '~> 2.0'
 gem 'git-trend'
 gem 'bootstrap-sass'
